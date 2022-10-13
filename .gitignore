@@ -1,6 +1,6 @@
 node_modules
 config.json
-graph.json
+
 buf.png
 comm.js
 .gitignore
