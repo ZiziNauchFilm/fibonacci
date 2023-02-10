@@ -1289,6 +1289,15 @@ return [part, ANS]
 functions[15]['VPRP3'].URL = 'YOUTUBE VPRP3 URL'
 functions[15]['VPRP3'].is_text = 1
 
+functions[15]['DPR1Q1'] = function () {
+let part = 'Условие'
+let ANS = 99
+return [part, ANS]
+}
+functions[15]['DPR1Q1'].URL = 'YOUTUBE DPR1Q1 URL'
+functions[15]['DPR1Q1'].is_text = 1
+
+
 let UserBase: User[] = []
 exitHook(() => {
     let buf = JSON.stringify(UserBase)
