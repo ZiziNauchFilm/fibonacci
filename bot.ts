@@ -1290,7 +1290,24 @@ functions[15]['VPRP3'].URL = 'YOUTUBE VPRP3 URL'
 functions[15]['VPRP3'].is_text = 1
 
 functions[15]['DPR1Q1'] = function () {
-let part = 'Условие'
+let KK = []
+let RR = []
+let N = []
+for ( let kk = 101 ; kk <= 199 ; kk++ ){
+    for (let rr = 101 ; rr <= 199; rr++  ){
+        for ( let n = 7; n <= 51; n++){
+            if (2*kk == rr*(n+1)-100*n+100){
+                KK.push(kk);
+                RR.push(rr);
+                N.push(n);
+
+            }
+        }
+    }
+}
+
+
+let part = `Условие ${KK.length}`;
 let ANS = 99
 return [part, ANS]
 }
