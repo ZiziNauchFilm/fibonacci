@@ -1432,8 +1432,8 @@ client.on('interactionCreate', async (interaction) => {
                         break
                     case '15':
                         {
-                        interaction.reply('LALALA')
-                        interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ' +
+                        await interaction.reply('LALALA')
+                        await interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ' +
 `
 +--------+------------------------------------------------------------------------+
 | КОД    | ОПИСАНИЕ ПОДТИПА ЗАДАЧИ                                                |
