@@ -1433,7 +1433,7 @@ client.on('interactionCreate', async (interaction) => {
                     case '15':
                         {
                         interaction.reply('LALALA')
-                        interaction.reply('```'+'ТИПЫ 15-й ЗАДАЧИ' +
+                        interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ' +
 `
 +--------+------------------------------------------------------------------------+
 | КОД    | ОПИСАНИЕ ПОДТИПА ЗАДАЧИ                                                |
