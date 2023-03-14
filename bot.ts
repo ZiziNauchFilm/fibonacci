@@ -165,7 +165,7 @@ functions[15]['VDL'] = function (){
     return [part, ANS]
 
 }
-functions[15]['VDL'].URL = 'YOUTUBE VDL URL'
+functions[15]['VDL'].URL = 'https://www.youtube.com/watch?v=XkTWtQD_wNY&t=1s'
 functions[15]['VDL'].is_text = 1
 
 functions[15]['DDL1'] = function () {
