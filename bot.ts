@@ -1625,7 +1625,7 @@ functions[15]['DPR1Q2'] = function () {
                 
                 let S = N[i]*Math.floor(Math.random() * 10+1)
                 
-                let XX1 = S*RR[i]-S*(N[i]-1)/N[i];
+                let XX1 = S*RR[i]/100-S*(N[i]-1)/N[i];
 
                 
 
