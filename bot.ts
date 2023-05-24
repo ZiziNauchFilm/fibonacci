@@ -1708,6 +1708,40 @@ functions[15]['DPR4Q3'].URL = 'YOUTUBE DPR4Q3 URL'
 functions[15]['DPR4Q3'].is_text = 1
 
 
+functions[15]['DPR5'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
+    
+                }
+            }
+        }
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let S = N[i]*Math.floor(Math.random() * 10+1)
+    let XX1 = Big(S).times(Big(RR[i])).div(Big(100)).minus(Big(S*(N[i]-1)/N[i])).toNumber();    
+    let XXN = Big(S).times(Big(RR[i])).div(Big(N[i])).div(Big(100)).toNumber();
+    
+    
+    
+    let part: string = ''
+    part += `В июле планируется взять кредит в банке на сумму ${S} млн рублей на срок ${N[i]} лет. Условия его возврата таковы:\n- каждый январь долг возрастает на x% по сравнению с концом предыдущего года;\n- с февраля по июнь каждого года необходимо выплатить часть долга;\n- в июле каждого года долг должен быть на одну и ту же величину меньше долга на июль предыдущего года.\nНайдите x, если известно, что наибольший платёж по кредиту составит не более ${XX1} млн рублей, а наименьший  — не менее ${XXN} млн рублей.`
+    let ANS = RR[i]-100;
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR5'].URL = 'YOUTUBE DPR5 URL'
+    functions[15]['DPR5'].is_text = 1
+
 let UserBase: User[] = []
 exitHook(() => {
     let buf = JSON.stringify(UserBase)
@@ -1858,6 +1892,7 @@ await interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ (ЧАСТЬ 2)' +
 | DPR4Q1 | Долг падает равномерно. Найти N по наибольшей выплате                   |
 | DPR4Q2 | Долг падает равномерно. Найти все выплаты по наибольшей выплате         |
 | DPR4Q3 | Долг падает равномерно. Найти все выплаты по наименьшей выплате         |
+| DPR5   | Долг падает равномерно. Найти r. X_1 <= ..., X_N => ...                 |
 +--------+-------------------------------------------------------------------------+
 ` +'```' )
                         break
