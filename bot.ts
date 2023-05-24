@@ -1566,6 +1566,45 @@ functions[15]['DPR1Q2'] = function () {
                             functions[15]['DPR2Q2'].URL = 'YOUTUBE DPR2Q2 URL'
                             functions[15]['DPR2Q2'].is_text = 1
 
+                            functions[15]['DPR3'] = function () {
+                                let Nmas = [Big(24),Big(36)] 
+                                let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+                                
+                                let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+                                let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+            
+                                let Denom = R1000.times(N).plus(R1000.times(Big(2))).minus(N.times(Big(1000))).plus(Big(2000))
+                                let Numer = R1000.times(Big(2)).times(N).plus(R1000.times(N).plus(R1000.times(Big(2)))).minus(N.times(Big(2000))).plus(Big(2000)).minus(N.times(Big(1000)))
+                                let gcdNumDen = gcdBIG(Numer, Denom)
+                                let X1 = Numer.div(gcdNumDen)
+                                let X2 = Denom.div(gcdNumDen)
+                                let multiplicator1 = Big(1000000).div(X1).round(0,Big.roundDown)
+                                let multiplicator2 = Big(100000).div(X1).round(0,Big.roundDown)
+                                if (multiplicator1.gt(0)) {
+                                    let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+                                    if (mult.eq(0)) {mult = Big(1)}  
+                                    X1 = X1.times(mult)
+                                    X2 = X2.times(mult)
+                                }
+            
+                                
+                                let NN = N.toNumber();
+                                let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+                                let XX2 = X2.toNumber();
+                                let XX1 = X1.toNumber();
+                                
+            
+                
+                                let part: string = ''
+                                part += `Сара 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за последние ${NN/2} месяцев Сара выплатит банку ${XX2} рублей. Какую сумму она выплатит за первые ${NN/2}? месяцев`
+                                let ANS = XX1;
+                                
+                                
+                                return [part, ANS]
+                                }
+                                functions[15]['DPR3'].URL = 'YOUTUBE DPR3 URL'
+                                functions[15]['DPR3'].is_text = 1
+
 let UserBase: User[] = []
 exitHook(() => {
     let buf = JSON.stringify(UserBase)
@@ -1712,6 +1751,7 @@ await interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ (ЧАСТЬ 2)' +
 | DPR1Q5 | Долг падает равномерно. Дано r, кредит и сумма выплат. Найти N          |
 | DPR2Q1 | Долг падает равномерно. Найти выплаты за первые столько-то месяцев      |
 | DPR2Q2 | Долг падает равномерно. Найти S, зная N,R, выплаты за какие-то месяцы   |
+| DPR3   | Долг падает равномерно. Найти выплаты за первые месяцы, зная последние  |
 +--------+-------------------------------------------------------------------------+
 ` +'```' )
                         break
