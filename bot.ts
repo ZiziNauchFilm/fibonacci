@@ -1487,6 +1487,85 @@ functions[15]['DPR1Q2'] = function () {
                     functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
                     functions[15]['DPR2Q1'].is_text = 1
 
+                    functions[15]['DPR2Q1'] = function () {
+                        let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
+                        let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+                        let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
+                        let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
+                        let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+                        let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+    
+                        let Denom = N.times(Big(2000))
+                        let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
+                        let gcdNumDen = gcdBIG(Numer, Denom)
+                        let S = Numer.div(gcdNumDen)
+                        let X = Denom.div(gcdNumDen)
+                        let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
+                        let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
+                        if (multiplicator1.gt(0)) {
+                            let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+                            if (mult.eq(0)) {mult = Big(1)}  
+                            S = S.times(mult)
+                            X = X.times(mult)
+                        }
+    
+                        
+                        let NN = N.toNumber();
+                        let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+                        let SS = S.toNumber();
+                        let LL = L.toNumber();
+    
+        
+                        let part: string = ''
+                        part += `Сара взяла в банке в кредит ${SS} рублей на срок ${NN} месяцев. По договору Сара должна вносить в банк часть денег в конце каждого месяца. Каждый месяц общая сумма долга возрастает на ${RR}%, а затем уменьшается на сумму, уплаченную Сарой банку в конце месяца. Суммы, выплачиваемые Сарой, подбираются так, чтобы сумма долга уменьшалась равномерно, то есть на одну и ту же величину каждый месяц. Какую сумму Сара выплатит банку в течение первых ${LL} месяцев кредитования?`
+                        let ANS = X.toNumber();
+                        
+                        
+                        return [part, ANS]
+                        }
+                        functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
+                        functions[15]['DPR2Q1'].is_text = 1
+
+                        functions[15]['DPR2Q2'] = function () {
+                            let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
+                            let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+                            let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
+                            let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
+                            let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+                            let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+        
+                            let Denom = N.times(Big(2000))
+                            let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
+                            let gcdNumDen = gcdBIG(Numer, Denom)
+                            let S = Numer.div(gcdNumDen)
+                            let X = Denom.div(gcdNumDen)
+                            let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
+                            let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
+                            if (multiplicator1.gt(0)) {
+                                let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+                                if (mult.eq(0)) {mult = Big(1)}  
+                                S = S.times(mult)
+                                X = X.times(mult)
+                            }
+        
+                            
+                            let NN = N.toNumber();
+                            let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+                            let SS = S.toNumber();
+                            let LL = L.toNumber();
+                            let XX = X.toNumber();
+        
+            
+                            let part: string = ''
+                            part += `Ребекка 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за первые ${LL} месяцев Ребекка выплатит банку ${XX} рублей. Какую сумму она планирует взять в кредит?`
+                            let ANS = SS;
+                            
+                            
+                            return [part, ANS]
+                            }
+                            functions[15]['DPR2Q2'].URL = 'YOUTUBE DPR2Q1 URL'
+                            functions[15]['DPR2Q2'].is_text = 1
+
 let UserBase: User[] = []
 exitHook(() => {
     let buf = JSON.stringify(UserBase)
