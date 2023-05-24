@@ -1352,292 +1352,327 @@ functions[15]['DPR1Q2'] = function () {
     
     return [part, ANS]
     }
-    functions[15]['DPR1Q2'].URL = 'YOUTUBE DPR1Q2 URL'
-    functions[15]['DPR1Q2'].is_text = 1
+functions[15]['DPR1Q2'].URL = 'YOUTUBE DPR1Q2 URL'
+functions[15]['DPR1Q2'].is_text = 1
 
-    functions[15]['DPR1Q3'] = function () {
-        let KK = []
-        let RR = []
-        let N = []
-        for ( let kk = 101 ; kk <= 199 ; kk++ ){
-            for (let rr = 101 ; rr <= 199; rr++  ){
-                for ( let n = 7; n <= 51; n++){
-                    if (2*kk == rr*(n+1)-100*n+100){
-                        KK.push(kk);
-                        RR.push(rr);
-                        N.push(n);
-        
-                    }
+functions[15]['DPR1Q3'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
+    
                 }
             }
         }
-        let i = Math.floor(Math.random() * (N.length))
-        
-        let part: string = ''
-        part += '15-го января Сара планирует взять кредит в банке на '
-        part += N[i].toString()
-        part += ' месяцев. Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на '
-        part += (RR[i]-100).toString()
-        part += '%  по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Сколько процентов от суммы кредита составляет общая сумма денег, которую Сара выплатит банку за весь срок кредитования?'
-        
-        let ANS = KK[i];
-        
-        
-        return [part, ANS]
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let part: string = ''
+    part += '15-го января Сара планирует взять кредит в банке на '
+    part += N[i].toString()
+    part += ' месяцев. Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на '
+    part += (RR[i]-100).toString()
+    part += '%  по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Сколько процентов от суммы кредита составляет общая сумма денег, которую Сара выплатит банку за весь срок кредитования?'
+    
+    let ANS = KK[i];
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR1Q3'].URL = 'YOUTUBE DPR1Q3 URL'
+    functions[15]['DPR1Q3'].is_text = 1
+
+functions[15]['DPR1Q4'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
+    
+                }
+            }
         }
-        functions[15]['DPR1Q3'].URL = 'YOUTUBE DPR1Q3 URL'
-        functions[15]['DPR1Q3'].is_text = 1
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let part: string = ''
+    part += `15-го января Моня планирует взять кредит в банке на некоторый срок (целое число месяцев). Условие его выплаты таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR[i]}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же сумму меньше долга на 15-е число предыдущего месяца.\n На сколько месяцев Моня хочет взять кредит, если известно, что общая сумма выплат после полного погашения кредита на ${KK[i]-100}% больше суммы, взятой в кредит?`
+    let ANS = N[i];
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR1Q4'].URL = 'YOUTUBE DPR1Q4 URL'
+    functions[15]['DPR1Q4'].is_text = 1
 
-        functions[15]['DPR1Q4'] = function () {
-            let KK = []
-            let RR = []
-            let N = []
-            for ( let kk = 101 ; kk <= 199 ; kk++ ){
-                for (let rr = 101 ; rr <= 199; rr++  ){
-                    for ( let n = 7; n <= 51; n++){
-                        if (2*kk == rr*(n+1)-100*n+100){
-                            KK.push(kk);
-                            RR.push(rr);
-                            N.push(n);
-            
-                        }
-                    }
+
+functions[15]['DPR1Q5'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
+    
                 }
             }
-            let i = Math.floor(Math.random() * (N.length))
-            
-            let part: string = ''
-            part += `15-го января Моня планирует взять кредит в банке на некоторый срок (целое число месяцев). Условие его выплаты таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR[i]}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же сумму меньше долга на 15-е число предыдущего месяца.\n На сколько месяцев Моня хочет взять кредит, если известно, что общая сумма выплат после полного погашения кредита на ${KK[i]-100}% больше суммы, взятой в кредит?`
-            let ANS = N[i];
-            
-            
-            return [part, ANS]
+        }
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let S = N[i]*Math.floor(Math.random() * 10+1)
+    let XX = S*KK[i]/100
+
+    let part: string = ''
+    part += `В июле Ицхак планирует взять кредит в банке на сумму ${S} млн рублей на некоторый срок (целое число лет). Условия его возврата таковы:\n - каждый январь долг возрастает на ${RR[i]-100}% по сравнению с концом предыдущего года;\n - с февраля по июнь каждого года необходимо выплатить часть долга;\n - в июле каждого года долг должен быть на одну и ту же сумму меньше долга на июль предыдущего года.\n На сколько лет Ицхак хочет взять кредит, если известно, что общая сумма выплат после его полного погашения составит ${XX} млн рублей?`
+    let ANS = N[i];
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR1Q5'].URL = 'YOUTUBE DPR1Q5 URL'
+    functions[15]['DPR1Q5'].is_text = 1
+
+functions[15]['DPR2Q1'] = function () {
+    let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
+    let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+    let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
+    let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
+    let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+    let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+
+    let Denom = N.times(Big(2000))
+    let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
+    let gcdNumDen = gcdBIG(Numer, Denom)
+    let S = Numer.div(gcdNumDen)
+    let X = Denom.div(gcdNumDen)
+    let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
+    let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
+    if (multiplicator1.gt(0)) {
+        let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+        if (mult.eq(0)) {mult = Big(1)}  
+        S = S.times(mult)
+        X = X.times(mult)
+    }
+
+    
+    let NN = N.toNumber();
+    let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+    let SS = S.toNumber();
+    let LL = L.toNumber();
+
+
+    let part: string = ''
+    part += `Сара взяла в банке в кредит ${SS} рублей на срок ${NN} месяцев. По договору Сара должна вносить в банк часть денег в конце каждого месяца. Каждый месяц общая сумма долга возрастает на ${RR}%, а затем уменьшается на сумму, уплаченную Сарой банку в конце месяца. Суммы, выплачиваемые Сарой, подбираются так, чтобы сумма долга уменьшалась равномерно, то есть на одну и ту же величину каждый месяц. Какую сумму Сара выплатит банку в течение первых ${LL} месяцев кредитования?`
+    let ANS = X.toNumber();
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
+    functions[15]['DPR2Q1'].is_text = 1
+
+functions[15]['DPR2Q1'] = function () {
+    let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
+    let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+    let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
+    let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
+    let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+    let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+
+    let Denom = N.times(Big(2000))
+    let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
+    let gcdNumDen = gcdBIG(Numer, Denom)
+    let S = Numer.div(gcdNumDen)
+    let X = Denom.div(gcdNumDen)
+    let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
+    let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
+    if (multiplicator1.gt(0)) {
+        let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+        if (mult.eq(0)) {mult = Big(1)}  
+        S = S.times(mult)
+        X = X.times(mult)
+    }
+
+    
+    let NN = N.toNumber();
+    let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+    let SS = S.toNumber();
+    let LL = L.toNumber();
+
+
+    let part: string = ''
+    part += `Сара взяла в банке в кредит ${SS} рублей на срок ${NN} месяцев. По договору Сара должна вносить в банк часть денег в конце каждого месяца. Каждый месяц общая сумма долга возрастает на ${RR}%, а затем уменьшается на сумму, уплаченную Сарой банку в конце месяца. Суммы, выплачиваемые Сарой, подбираются так, чтобы сумма долга уменьшалась равномерно, то есть на одну и ту же величину каждый месяц. Какую сумму Сара выплатит банку в течение первых ${LL} месяцев кредитования?`
+    let ANS = X.toNumber();
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
+    functions[15]['DPR2Q1'].is_text = 1
+
+functions[15]['DPR2Q2'] = function () {
+    let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
+    let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+    let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
+    let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
+    let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+    let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+
+    let Denom = N.times(Big(2000))
+    let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
+    let gcdNumDen = gcdBIG(Numer, Denom)
+    let S = Numer.div(gcdNumDen)
+    let X = Denom.div(gcdNumDen)
+    let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
+    let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
+    if (multiplicator1.gt(0)) {
+        let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+        if (mult.eq(0)) {mult = Big(1)}  
+        S = S.times(mult)
+        X = X.times(mult)
+    }
+
+    
+    let NN = N.toNumber();
+    let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+    let SS = S.toNumber();
+    let LL = L.toNumber();
+    let XX = X.toNumber();
+
+
+    let part: string = ''
+    part += `Ребекка 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за первые ${LL} месяцев Ребекка выплатит банку ${XX} рублей. Какую сумму она планирует взять в кредит?`
+    let ANS = SS;
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR2Q2'].URL = 'YOUTUBE DPR2Q2 URL'
+    functions[15]['DPR2Q2'].is_text = 1
+
+functions[15]['DPR3'] = function () {
+    let Nmas = [Big(24),Big(36)] 
+    let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
+    
+    let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
+    let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+
+    let Denom = R1000.times(N).plus(R1000.times(Big(2))).minus(N.times(Big(1000))).plus(Big(2000))
+    let Numer = R1000.times(Big(2)).times(N).plus(R1000.times(N).plus(R1000.times(Big(2)))).minus(N.times(Big(2000))).plus(Big(2000)).minus(N.times(Big(1000)))
+    let gcdNumDen = gcdBIG(Numer, Denom)
+    let X1 = Numer.div(gcdNumDen)
+    let X2 = Denom.div(gcdNumDen)
+    let multiplicator1 = Big(1000000).div(X1).round(0,Big.roundDown)
+    let multiplicator2 = Big(100000).div(X1).round(0,Big.roundDown)
+    if (multiplicator1.gt(0)) {
+        let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
+        if (mult.eq(0)) {mult = Big(1)}  
+        X1 = X1.times(mult)
+        X2 = X2.times(mult)
+    }
+
+    
+    let NN = N.toNumber();
+    let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
+    let XX2 = X2.toNumber();
+    let XX1 = X1.toNumber();
+    
+
+
+    let part: string = ''
+    part += `Сара 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за последние ${NN/2} месяцев Сара выплатит банку ${XX2} рублей. Какую сумму она выплатит за первые ${NN/2} месяцев?`
+    let ANS = XX1;
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR3'].URL = 'YOUTUBE DPR3 URL'
+    functions[15]['DPR3'].is_text = 1
+
+functions[15]['DPR4Q1'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
+    
+                }
             }
-            functions[15]['DPR1Q4'].URL = 'YOUTUBE DPR1Q4 URL'
-            functions[15]['DPR1Q4'].is_text = 1
-
-
-            functions[15]['DPR1Q5'] = function () {
-                let KK = []
-                let RR = []
-                let N = []
-                for ( let kk = 101 ; kk <= 199 ; kk++ ){
-                    for (let rr = 101 ; rr <= 199; rr++  ){
-                        for ( let n = 7; n <= 51; n++){
-                            if (2*kk == rr*(n+1)-100*n+100){
-                                KK.push(kk);
-                                RR.push(rr);
-                                N.push(n);
-                
-                            }
-                        }
-                    }
-                }
-                let i = Math.floor(Math.random() * (N.length))
-                
-                let S = N[i]*Math.floor(Math.random() * 10+1)
-                let XX = S*KK[i]/100
-
-                let part: string = ''
-                part += `В июле Ицхак планирует взять кредит в банке на сумму ${S} млн рублей на некоторый срок (целое число лет). Условия его возврата таковы:\n - каждый январь долг возрастает на ${RR[i]-100}% по сравнению с концом предыдущего года;\n - с февраля по июнь каждого года необходимо выплатить часть долга;\n - в июле каждого года долг должен быть на одну и ту же сумму меньше долга на июль предыдущего года.\n На сколько лет Ицхак хочет взять кредит, если известно, что общая сумма выплат после его полного погашения составит ${XX} млн рублей?`
-                let ANS = N[i];
-                
-                
-                return [part, ANS]
-                }
-                functions[15]['DPR1Q5'].URL = 'YOUTUBE DPR1Q5 URL'
-                functions[15]['DPR1Q5'].is_text = 1
-
-                functions[15]['DPR2Q1'] = function () {
-                    let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
-                    let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
-                    let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
-                    let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
-                    let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
-                    let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
-
-                    let Denom = N.times(Big(2000))
-                    let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
-                    let gcdNumDen = gcdBIG(Numer, Denom)
-                    let S = Numer.div(gcdNumDen)
-                    let X = Denom.div(gcdNumDen)
-                    let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
-                    let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
-                    if (multiplicator1.gt(0)) {
-                        let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
-                        if (mult.eq(0)) {mult = Big(1)}  
-                        S = S.times(mult)
-                        X = X.times(mult)
-                    }
-
-                    
-                    let NN = N.toNumber();
-                    let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
-                    let SS = S.toNumber();
-                    let LL = L.toNumber();
+        }
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let S = N[i]*Math.floor(Math.random() * 10+1)
+    
+    let XX1 = Big(S).times(Big(RR[i])).div(Big(100)).minus(Big(S*(N[i]-1)/N[i])).toNumber();
 
     
-                    let part: string = ''
-                    part += `Сара взяла в банке в кредит ${SS} рублей на срок ${NN} месяцев. По договору Сара должна вносить в банк часть денег в конце каждого месяца. Каждый месяц общая сумма долга возрастает на ${RR}%, а затем уменьшается на сумму, уплаченную Сарой банку в конце месяца. Суммы, выплачиваемые Сарой, подбираются так, чтобы сумма долга уменьшалась равномерно, то есть на одну и ту же величину каждый месяц. Какую сумму Сара выплатит банку в течение первых ${LL} месяцев кредитования?`
-                    let ANS = X.toNumber();
-                    
-                    
-                    return [part, ANS]
-                    }
-                    functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
-                    functions[15]['DPR2Q1'].is_text = 1
 
-                    functions[15]['DPR2Q1'] = function () {
-                        let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
-                        let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
-                        let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
-                        let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
-                        let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
-                        let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
+    let part: string = ''
+    part += `В июле Соломон планирует взять кредит в банке на сумму ${S} млн рублей на некоторый срок (целое число лет). Условия его возврата таковы:\n - каждый январь долг возрастает на ${RR[i]-100}% по сравнению с концом предыдущего года;\n - с февраля по июнь каждого года необходимо выплатить часть долга;\n - в июле каждого года долг должен быть на одну и ту же сумму меньше долга на июль предыдущего года.\n На сколько лет Соломон планирует взять кредит, если наибольший годовой платёж составит ${XX1} млн рублей?`
+    let ANS = N[i];
     
-                        let Denom = N.times(Big(2000))
-                        let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
-                        let gcdNumDen = gcdBIG(Numer, Denom)
-                        let S = Numer.div(gcdNumDen)
-                        let X = Denom.div(gcdNumDen)
-                        let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
-                        let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
-                        if (multiplicator1.gt(0)) {
-                            let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
-                            if (mult.eq(0)) {mult = Big(1)}  
-                            S = S.times(mult)
-                            X = X.times(mult)
-                        }
     
-                        
-                        let NN = N.toNumber();
-                        let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
-                        let SS = S.toNumber();
-                        let LL = L.toNumber();
+    return [part, ANS]
+    }
+    functions[15]['DPR4Q1'].URL = 'YOUTUBE DPR4Q1 URL'
+    functions[15]['DPR4Q1'].is_text = 1
+
+functions[15]['DPR4Q2'] = function () {
+    let KK = []
+    let RR = []
+    let N = []
+    for ( let kk = 101 ; kk <= 199 ; kk++ ){
+        for (let rr = 101 ; rr <= 199; rr++  ){
+            for ( let n = 7; n <= 51; n++){
+                if (2*kk == rr*(n+1)-100*n+100){
+                    KK.push(kk);
+                    RR.push(rr);
+                    N.push(n);
     
-        
-                        let part: string = ''
-                        part += `Сара взяла в банке в кредит ${SS} рублей на срок ${NN} месяцев. По договору Сара должна вносить в банк часть денег в конце каждого месяца. Каждый месяц общая сумма долга возрастает на ${RR}%, а затем уменьшается на сумму, уплаченную Сарой банку в конце месяца. Суммы, выплачиваемые Сарой, подбираются так, чтобы сумма долга уменьшалась равномерно, то есть на одну и ту же величину каждый месяц. Какую сумму Сара выплатит банку в течение первых ${LL} месяцев кредитования?`
-                        let ANS = X.toNumber();
-                        
-                        
-                        return [part, ANS]
-                        }
-                        functions[15]['DPR2Q1'].URL = 'YOUTUBE DPR2Q1 URL'
-                        functions[15]['DPR2Q1'].is_text = 1
-
-                        functions[15]['DPR2Q2'] = function () {
-                            let Nmas = [Big(24),Big(36)] // Задача предполагает только 2 года
-                            let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
-                            let k_Lmas = [Big(2),Big(3)] // Задача предполагает только 2 года
-                            let L = N.div(k_Lmas[Math.floor(Math.random() * (k_Lmas.length))])
-                            let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
-                            let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
-        
-                            let Denom = N.times(Big(2000))
-                            let Numer = L.times(N.times(R1000).plus(R1000.times(N.minus(L))).plus((L.plus(Big(1)).minus(N.times(Big(2)))).times(Big(1000))))
-                            let gcdNumDen = gcdBIG(Numer, Denom)
-                            let S = Numer.div(gcdNumDen)
-                            let X = Denom.div(gcdNumDen)
-                            let multiplicator1 = Big(1000000).div(X).round(0,Big.roundDown)
-                            let multiplicator2 = Big(100000).div(X).round(0,Big.roundDown)
-                            if (multiplicator1.gt(0)) {
-                                let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
-                                if (mult.eq(0)) {mult = Big(1)}  
-                                S = S.times(mult)
-                                X = X.times(mult)
-                            }
-        
-                            
-                            let NN = N.toNumber();
-                            let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
-                            let SS = S.toNumber();
-                            let LL = L.toNumber();
-                            let XX = X.toNumber();
-        
-            
-                            let part: string = ''
-                            part += `Ребекка 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за первые ${LL} месяцев Ребекка выплатит банку ${XX} рублей. Какую сумму она планирует взять в кредит?`
-                            let ANS = SS;
-                            
-                            
-                            return [part, ANS]
-                            }
-                            functions[15]['DPR2Q2'].URL = 'YOUTUBE DPR2Q2 URL'
-                            functions[15]['DPR2Q2'].is_text = 1
-
-                            functions[15]['DPR3'] = function () {
-                                let Nmas = [Big(24),Big(36)] 
-                                let N = Nmas[Math.floor(Math.random() * (Nmas.length))]
-                                
-                                let R1000mas = [Big(1010), Big(1020), Big(1030), Big(1040), Big(1050), Big(1060), Big(1070), Big(1080), Big(1090), Big(1100), Big(1110), Big(1120), Big(1130), Big(1140), Big(1150), Big(1200),]
-                                let R1000 = R1000mas[Math.floor(Math.random() * (R1000mas.length))]
-            
-                                let Denom = R1000.times(N).plus(R1000.times(Big(2))).minus(N.times(Big(1000))).plus(Big(2000))
-                                let Numer = R1000.times(Big(2)).times(N).plus(R1000.times(N).plus(R1000.times(Big(2)))).minus(N.times(Big(2000))).plus(Big(2000)).minus(N.times(Big(1000)))
-                                let gcdNumDen = gcdBIG(Numer, Denom)
-                                let X1 = Numer.div(gcdNumDen)
-                                let X2 = Denom.div(gcdNumDen)
-                                let multiplicator1 = Big(1000000).div(X1).round(0,Big.roundDown)
-                                let multiplicator2 = Big(100000).div(X1).round(0,Big.roundDown)
-                                if (multiplicator1.gt(0)) {
-                                    let mult = Big(Math.random()).times(multiplicator1.plus(1).minus(multiplicator2)).plus(multiplicator2).round(0,Big.roundDown)
-                                    if (mult.eq(0)) {mult = Big(1)}  
-                                    X1 = X1.times(mult)
-                                    X2 = X2.times(mult)
-                                }
-            
-                                
-                                let NN = N.toNumber();
-                                let RR = R1000.div(Big(10)).minus(Big(100)).toNumber();
-                                let XX2 = X2.toNumber();
-                                let XX1 = X1.toNumber();
-                                
-            
-                
-                                let part: string = ''
-                                part += `Сара 15 января планирует взять кредит на ${NN} месяца(-ев). Условия его возврата таковы:\n - 1-го числа каждого месяца долг возрастает на ${RR}% по сравнению с концом предыдущего месяца;\n - со 2-го по 14-е число каждого месяца необходимо выплатить часть долга;\n - 15-го числа каждого месяца долг должен быть на одну и ту же величину меньше долга на 15-е число предыдущего месяца.\n Известно, что за последние ${NN/2} месяцев Сара выплатит банку ${XX2} рублей. Какую сумму она выплатит за первые ${NN/2} месяцев?`
-                                let ANS = XX1;
-                                
-                                
-                                return [part, ANS]
-                                }
-                                functions[15]['DPR3'].URL = 'YOUTUBE DPR3 URL'
-                                functions[15]['DPR3'].is_text = 1
-
-            functions[15]['DPR4Q1'] = function () {
-                let KK = []
-                let RR = []
-                let N = []
-                for ( let kk = 101 ; kk <= 199 ; kk++ ){
-                    for (let rr = 101 ; rr <= 199; rr++  ){
-                        for ( let n = 7; n <= 51; n++){
-                            if (2*kk == rr*(n+1)-100*n+100){
-                                KK.push(kk);
-                                RR.push(rr);
-                                N.push(n);
-                
-                            }
-                        }
-                    }
                 }
-                let i = Math.floor(Math.random() * (N.length))
-                
-                let S = N[i]*Math.floor(Math.random() * 10+1)
-                
-                let XX1 = Big(S).times(Big(RR[i])).div(Big(100)).minus(Big(S*(N[i]-1)/N[i])).toNumber();
+            }
+        }
+    }
+    let i = Math.floor(Math.random() * (N.length))
+    
+    let S = N[i]*Math.floor(Math.random() * 10+1)
+    
+    let XX1 = Big(S).times(Big(RR[i])).div(Big(100)).minus(Big(S*(N[i]-1)/N[i])).toNumber();
 
-                
+    
 
-                let part: string = ''
-                part += `В июле Соломон планирует взять кредит в банке на сумму ${S} млн рублей на некоторый срок (целое число лет). Условия его возврата таковы:\n - каждый январь долг возрастает на ${RR[i]-100}% по сравнению с концом предыдущего года;\n - с февраля по июнь каждого года необходимо выплатить часть долга;\n - в июле каждого года долг должен быть на одну и ту же сумму меньше долга на июль предыдущего года.\n На сколько лет Соломон планирует взять кредит, если наибольший годовой платёж составит ${XX1} млн рублей?`
-                let ANS = N[i];
-                
-                
-                return [part, ANS]
-                }
-                functions[15]['DPR4Q1'].URL = 'YOUTUBE DPR4Q1 URL'
-                functions[15]['DPR4Q1'].is_text = 1
+    let part: string = ''
+    part += `В июле Фимочка хочет взять кредит в банке на сумму ${S} млн рублей на некоторый срок (целое число лет). Условия его возврата таковы:\n - каждый январь долг возрастает на  ${RR[i]-100}% по сравнению с концом предыдущего года;\n - с февраля по июнь каждого года необходимо выплатить часть долга;\n - в июле каждого года долг должен быть на одну и ту же сумму меньше долга на июль предыдущего года.\n Сколько Фимочка в итоге выплатит после полного погашения кредита, если наибольший годовой платёж составит ${XX1} млн рублей?`
+    let ANS = KK[i]*S;
+    
+    
+    return [part, ANS]
+    }
+    functions[15]['DPR4Q2'].URL = 'YOUTUBE DPR4Q2 URL'
+    functions[15]['DPR4Q2'].is_text = 1
+
 
 let UserBase: User[] = []
 exitHook(() => {
@@ -1787,6 +1822,7 @@ await interaction.followUp('```'+'ТИПЫ 15-й ЗАДАЧИ (ЧАСТЬ 2)' +
 | DPR2Q2 | Долг падает равномерно. Найти S, зная N,R, выплаты за какие-то месяцы   |
 | DPR3   | Долг падает равномерно. Найти выплаты за первые месяцы, зная последние  |
 | DPR4Q1 | Долг падает равномерно. Найти N по наибольшей выплате                   |
+| DPR4Q2 | Долг падает равномерно. Найти все выплаты по наибольшей выплате         |
 +--------+-------------------------------------------------------------------------+
 ` +'```' )
                         break
